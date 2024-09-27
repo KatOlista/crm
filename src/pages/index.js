@@ -1,0 +1,7 @@
+export { CustomersPage } from './CustomersPage/CustomersPage'
+export { DashboardPage } from './DashboardPage/DashboardPage'
+export { HelpPage } from './HelpPage/HelpPage'
+export { IncomePage } from './IncomePage/IncomePage'
+export { ProductPage } from './ProductPage/ProductPage'
+export { PromotePage } from './PromotePage/PromotePage'
+export { NotFoundPage } from './NotFoundPage/NotFoundPage'
