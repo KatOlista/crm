@@ -1,9 +1,9 @@
 .navigation {
-  &__list {}
+  flex: auto;
 
-  &__item {}
-
-  &__link {}
-
-  &__active {}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
 }

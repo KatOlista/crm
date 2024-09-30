@@ -1,7 +1,33 @@
 .dashboard {
-  &__logo {}
-  
-  &__title {}
+  padding: 36px 36px 76px 40px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
 
-  &__version {}
+  &__heading {
+    padding-bottom: 64px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__logo {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__title {
+    padding-left: 8px;
+    font-weight: 600;
+    line-height: 39px;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+
+  &__version {
+    padding-left: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    color: #838383;
+  }
 }

@@ -1,0 +1,47 @@
+.item {
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__link {
+    padding: 11px 8px 11px 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    color: #9197b3;
+
+    transition: all 0.3s ease;
+  }
+
+  &__icon-stroke {
+    stroke: #9197B3;
+
+    transition: stroke 0.3s ease;
+  }
+
+  &__icon-fill {
+    fill: #9197B3;
+
+    transition: fill 0.3s ease;
+  }
+
+  &__active {
+    background-color: #5932ea;
+    color: #fff;
+
+    .item__icon-stroke {
+      stroke: #fff;
+    }
+
+    .item__icon-fill {
+      fill: #fff;
+    }
+  }
+}

@@ -6,40 +6,10 @@ import UserIcon from '../assets/icons/user-square.svg?react'
 import WalletIcon from '../assets/icons/wallet-money.svg?react'
 
 export const menu = [
-  {
-    id: 1,
-    to: 'dashboard',
-    icon: KeyIcon,
-    title: 'Dashboard'
-  },
-  {
-    id: 2,
-    to: 'product',
-    icon: CubeIcon,
-    title: 'Product'
-  },
-  {
-    id: 3,
-    to: 'customers',
-    icon: UserIcon,
-    title: 'Customers'
-  },
-  {
-    id: 4,
-    to: 'income',
-    icon: WalletIcon,
-    title: 'Income'
-  },
-  {
-    id: 5,
-    to: 'promote',
-    icon: DiscountIcon,
-    title: 'Promote'
-  },
-  {
-    id: 6,
-    to: 'help',
-    icon: MessageIcon,
-    title: 'Help'
-  }
+  {id: 1, to: '/', className: 'icon-stroke', icon: KeyIcon, title: 'Dashboard'},
+  {id: 2, to: 'product', className: 'icon-fill', icon: CubeIcon, title: 'Product'},
+  {id: 3, to: 'customers', className: 'icon-stroke', icon: UserIcon, title: 'Customers'},
+  {id: 4, to: 'income', className: 'icon-stroke', icon: WalletIcon, title: 'Income'},
+  {id: 5, to: 'promote', className: 'icon-fill', icon: DiscountIcon, title: 'Promote'},
+  {id: 6, to: 'help', className: 'icon-fill', icon: MessageIcon, title: 'Help'}
 ]

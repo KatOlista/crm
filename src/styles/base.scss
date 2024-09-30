@@ -11,6 +11,7 @@ body {
   line-height: 100%;
   background-color: #fafbff;
   color: #292d32;
+  letter-spacing: -0.01em;
 }
 
 #root {
@@ -22,3 +23,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  display: flex;
+}
