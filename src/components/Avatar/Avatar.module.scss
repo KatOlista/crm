@@ -1,0 +1,23 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__photo {
+    max-width: 42px;
+  }
+
+  &__info {}
+
+  &__name {
+    letter-spacing: 0.01em;
+    color: #000;
+  }
+
+  &__role {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: #757575;
+  }
+}

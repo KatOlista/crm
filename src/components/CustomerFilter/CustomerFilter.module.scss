@@ -1,0 +1,17 @@
+.filter {
+  padding: 0 44px 20px 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__members {
+    padding-top: 7px;
+    font-weight: 400;
+    color: #16c098;
+    transition: color 0.3s ease;
+  }
+
+  &__invisible {
+    color: transparent;
+  }
+}

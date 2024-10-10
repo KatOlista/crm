@@ -6,4 +6,7 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
   base: './',
   plugins: [svgr(), react()],
+  optimizeDeps: {
+    exclude: ['js-big-decimal']
+  },
 })

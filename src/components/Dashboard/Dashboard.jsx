@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import { Navigation } from '..';
+import { Avatar, Navigation } from '..';
 
 import styles from './Dashboard.module.scss'
 import DashboardLogo from '../../assets/icons/dashboard.svg?react'
@@ -23,6 +23,8 @@ export const Dashboard = () => {
       </div>
 
       <Navigation />
+
+      <Avatar />
     </aside>
   )
 }

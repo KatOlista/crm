@@ -3,10 +3,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 64px;
   background-color: #fff;
 
   &__heading {
-    padding-bottom: 64px;
     display: flex;
     align-items: stretch;
   }

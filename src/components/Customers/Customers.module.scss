@@ -1,0 +1,55 @@
+.customers {
+  &__wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  &__head {
+    padding: 20px 44px 20px 38px;
+    border-bottom: 1px solid #eee;
+    color: #b5b7c0;
+
+    p {
+      text-transform: capitalize;
+    }
+
+    p:last-of-type {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    padding: 0 44px 0 38px;
+    display: flex;
+
+    p {
+      padding: 20px 0 20px 0;
+      display: block;
+      text-align: left;
+    }
+
+    p:nth-child(1) {
+      flex: 20%;
+    }
+
+    p:nth-child(2) {
+      flex: 12%;
+    }
+
+    p:nth-child(3) {
+      flex: 20%;
+    }
+
+    p:nth-child(4) {
+      flex: 24%;
+    }
+
+    p:nth-child(5) {
+      flex: 14%;
+    }
+
+    p:nth-child(6) {
+      flex: 10%;
+    }
+  }
+}

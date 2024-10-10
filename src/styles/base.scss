@@ -8,7 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 20px;
   background-color: #fafbff;
   color: #292d32;
   letter-spacing: -0.01em;
@@ -25,4 +25,12 @@ body {
 
 .app {
   display: flex;
+}
+
+.main {
+  width: 100%;
+  padding: 41px 95px 0 71px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
