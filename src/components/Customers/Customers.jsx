@@ -1,10 +1,11 @@
-import { useCustomersStore } from '../../store/customersStore'
 import { CustomerItem } from '../'
+import { useCustomersStore } from '../../store/customersStore'
 
 import styles from './Customers.module.scss'
 
 export const Customers = () => {
-  const customers = useCustomersStore((state) => state.customers);
+  const customers = useCustomersStore(state => state.customers);
+  const visibleCustomers = useCustomersStore((state) => state.visibleCustomers);
 
   return (
     <div className={styles.customers__wrapper}>
@@ -18,7 +19,7 @@ export const Customers = () => {
           ))}
         </li>
 
-        {customers?.map(person => (
+        {visibleCustomers?.map(person => (
           <CustomerItem
             key={person.slug}
             person={person}

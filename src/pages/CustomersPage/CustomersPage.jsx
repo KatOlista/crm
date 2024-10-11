@@ -4,7 +4,7 @@ import { useCustomersStore } from '../../store/customersStore';
 import styles from './CustomersPage.module.scss'
 
 export const CustomersPage = () => {
-  const customers = useCustomersStore((state) => state.customers);
+  const customers = useCustomersStore(state => state.customers);
 
   return (
     <div className={styles.customers}>

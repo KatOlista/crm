@@ -1,17 +1,24 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import {v4 as uuidv4} from 'uuid'
 import cn from 'classnames'
 
 import { Button } from '..'
+import { changePage } from '../../utils/changePage'
 import { usePagination } from '../../hooks/usePagination'
 import { useCustomersStore } from '../../store/customersStore'
+import { usePaginationStore } from '../../store/paginationStore'
 import { DEFAULT_PAGE, DEFAULT_SIBLING, DOTS, PAGE_SIZE } from '../../utils'
 
 import styles from './Pagination.module.scss'
 
 export const Pagination = () => {
-  const customers = useCustomersStore((state) => state.customers);
-  const [page, setPage] = useState(DEFAULT_PAGE);
+  const customers = useCustomersStore(state => state.customers);
+  const setVisibleCustomers = useCustomersStore(state => state.setVisibleCustomers);
+
+  const page = usePaginationStore(state => state.page);
+  const setPage = usePaginationStore(state => state.setPage);
+  const fromItem = usePaginationStore(state => state.fromItem);
+  const setFromItem = usePaginationStore(state => state.setFromItem);
 
   const pageCount = Math.ceil(customers.length / PAGE_SIZE);
 
@@ -25,21 +32,12 @@ export const Pagination = () => {
   const isActivePrev = page === DEFAULT_PAGE;
   const isActiveNext = page === pageCount;
 
-  // customersFromPage =
+  useEffect(() => {
+    setFromItem();
+    setVisibleCustomers(fromItem, page);
+  }, [fromItem, customers, page]);
 
-  const pageHandler = (direction) => {
-    if (direction === 'next' && page < pageCount) {
-      return setPage(page + 1);
-    }
-
-    if (direction === 'prev' && page > DEFAULT_PAGE) {
-      return setPage(page - 1);
-    }
-
-    return null;
-  };
-
-  const pagePaginationHandler = (content) => {
+  const pageListHandler = (content) => {
     const myuuid = uuidv4();
 
     if (content === DOTS) {
@@ -69,21 +67,21 @@ export const Pagination = () => {
         <Button
           disabled={isActivePrev}
           buttonClassName={styles.pagination__button}
-          onClick={() => pageHandler('prev')}
+          onClick={() => changePage('prev', page, setPage, pageCount)}
         >
           &#60;
         </Button>
       </li>
 
       <ul className={styles.pagination__pages}>
-        {paginationPages.map(pageNumber => pagePaginationHandler(pageNumber))}
+        {paginationPages.map(pageNumber => pageListHandler(pageNumber))}
       </ul>
 
       <li>
         <Button
           disabled={isActiveNext}
           buttonClassName={styles.pagination__button}
-          onClick={() =>pageHandler('next')}
+          onClick={() => changePage('next', page, setPage, pageCount)}
         >
           &#62;
         </Button>
