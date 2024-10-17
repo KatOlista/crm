@@ -17,9 +17,12 @@
     color: transparent;
   }
 
-  @media (min-width: 990px) {
-    padding: 0 44px 20px 38px;
+  @media (min-width: 678px) {
     flex-direction: row;
     align-items: center;
+  }
+
+  @media (min-width: 990px) {
+    padding: 0 44px 20px 38px;
   }
 }
