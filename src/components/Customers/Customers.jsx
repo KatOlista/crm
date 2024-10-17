@@ -15,7 +15,7 @@ export const Customers = () => {
           {Object.keys(customers[0])
             .filter(name => name !== 'slug')
             .map(name => (
-              <p className={styles.customers__th} key={name}>{name}</p>
+              <p key={name}>{name}</p>
           ))}
         </li>
 

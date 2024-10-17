@@ -29,8 +29,31 @@ body {
 
 .main {
   width: 100%;
-  padding: 41px 95px 0 71px;
+  padding: 24px 5px 0;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
+}
+
+.noscroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.menu-active {
+  left: 0;
+}
+
+@media (min-width: 990px) {
+  .main {
+    padding: 40px 20px 0 20px;
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    padding: 40px 95px 0 71px;
+    gap: 50px;
+  }
 }

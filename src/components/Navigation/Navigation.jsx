@@ -1,5 +1,5 @@
-import { menu } from '../../data/menu';
-import { NavItem } from '../NavItem/NavItem';
+import { NavItem } from '..'
+import { menu } from '../../data/menu'
 
 import styles from './Navigation.module.scss'
 

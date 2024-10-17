@@ -1,8 +1,10 @@
 .filter {
-  padding: 0 44px 20px 38px;
+  padding: 0 20px 20px 24px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
+  gap: 20px;
 
   &__members {
     padding-top: 7px;
@@ -13,5 +15,11 @@
 
   &__invisible {
     color: transparent;
+  }
+
+  @media (min-width: 990px) {
+    padding: 0 44px 20px 38px;
+    flex-direction: row;
+    align-items: center;
   }
 }

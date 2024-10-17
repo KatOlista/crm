@@ -1,6 +1,41 @@
 .header {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
   font-size: 24px;
   line-height: 32px;
   color: #000;
   letter-spacing: 0;
+
+  &__button {
+    padding-inline: 10px;
+    z-index: 3;
+  }
+
+  &__icon {
+    width: 0;
+    stroke: #000;
+    transition:
+      stroke 0.15s ease,
+      transform 0.3s ease;
+  }
+
+  &__icon:active {
+    stroke: #5932ea;
+  }
+
+  &__show {
+    width: 100%;
+    transform: rotate(360deg) scale(0.9);
+  }
+
+  @media (min-width: 1025px) {
+    justify-content: normal;
+
+    &__button {
+      display: none;
+    }
+  }
 }

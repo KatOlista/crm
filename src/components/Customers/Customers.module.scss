@@ -5,7 +5,6 @@
   }
 
   &__head {
-    padding: 20px 44px 20px 38px;
     border-bottom: 1px solid #eee;
     color: #b5b7c0;
 
@@ -19,7 +18,7 @@
   }
 
   &__item {
-    padding: 0 44px 0 38px;
+    padding: 0 20px;
     display: flex;
 
     p {
@@ -50,6 +49,12 @@
 
     p:nth-child(6) {
       flex: 10%;
+    }
+  }
+
+  @media (min-width: 990px) {
+    &__item {
+      padding: 0 44px 0 38px;
     }
   }
 }

@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
 
-import { Dashboard, Header } from './components'
+import { Menu, Header } from './components'
 
 export const App = () => {
   return (
     <div className='app'>
-      <Dashboard />
+      <Menu />
 
       <main className='main'>
         <Header />
