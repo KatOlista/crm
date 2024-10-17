@@ -19,6 +19,7 @@
 
   &__item {
     padding: 0 20px;
+    width: max-content;
     display: flex;
 
     p {
@@ -29,32 +30,39 @@
 
     p:nth-child(1) {
       flex: 20%;
+      min-width: 143px;
     }
 
     p:nth-child(2) {
       flex: 12%;
+      min-width: 87px;
     }
 
     p:nth-child(3) {
       flex: 20%;
+      min-width: 140px;
     }
 
     p:nth-child(4) {
       flex: 24%;
+      min-width: 180px;
     }
 
     p:nth-child(5) {
       flex: 14%;
+      min-width: 125px;
     }
 
     p:nth-child(6) {
       flex: 10%;
+      min-width: 90px;
     }
   }
 
   @media (min-width: 990px) {
     &__item {
       padding: 0 44px 0 38px;
+      width: auto;
     }
   }
 }
