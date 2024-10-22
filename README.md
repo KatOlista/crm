@@ -1,13 +1,6 @@
 ## [CRM](katolista.github.io/crm/)
 
-CRM is a web application that imitate dashboard.
-
-
-## Features:
-
-- There are placed USD/UAH and EUR/UAH rates in Header;
-- It is possible to change amoun in every input field. The calculation result will be shown in the another input field;
-- If currency is changed value is recalculated;
+CRM is a web application that imitate dashboard adapted for different screens.
 
 
 ## Technologies used:
