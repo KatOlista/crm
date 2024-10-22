@@ -12,7 +12,7 @@ CRM is a web application that imitate dashboard.
 
 ## Technologies used:
 
-- Zustand
+- ![Zustand](https://img.shields.io/badge/Zustand-white?style=for-the-badge&color=%2361286b)
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 - ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
