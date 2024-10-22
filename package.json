@@ -4,7 +4,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "./",
+  "homepage": "https://katolista.github.io/crm/",
   "scripts": {
     "build": "vite build",
     "deploy": "gh-pages -d dist",
