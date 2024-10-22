@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
+
+import { bigScreenBreakpoint } from '../utils'
 
 export const useClickOutside = (
   ref,
   callback,
 ) => {
+  const innerWidth = window.innerWidth;
+
   const handleClick = (e) => {
     if (ref.current && !ref.current.contains(e.target)) {
       callback();
@@ -11,7 +15,7 @@ export const useClickOutside = (
   };
 
   useEffect(() => {
-    if (window.innerWidth < 1440) {
+    if (innerWidth < bigScreenBreakpoint) {
       document.addEventListener('click', handleClick);
     }
 

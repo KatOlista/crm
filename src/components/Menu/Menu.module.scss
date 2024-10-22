@@ -1,5 +1,5 @@
 .menu {
-  padding: 36px 36px 76px 40px;
+  padding: 24px 24px 76px 20px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@
   &__heading {
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -32,6 +33,34 @@
     font-weight: 500;
     font-size: 10px;
     color: #838383;
+  }
+
+  &__button {
+    padding-inline: 10px;
+  }
+
+  &__icon {
+    width: 100%;
+    stroke: #000;
+    transition:
+      stroke 0.15s ease,
+      transform 0.3s ease;
+  }
+
+  &__icon:active {
+    stroke: #5932ea;
+  }
+
+  @media (min-width: 768px) {
+    padding: 36px 36px 76px 40px;
+
+    &__heading {
+      justify-content: normal;
+    }
+
+    &__button {
+      display: none;
+    }
   }
 
   @media (max-width: 1024px) {

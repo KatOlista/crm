@@ -1,1 +1,11 @@
-.help {}
+.help {
+  padding: 20px 20px 30px 24px;
+  min-height: 70vh;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+
+  @media (min-width: 990px) {
+    padding: 30px 44px 40px 38px;
+  }
+}

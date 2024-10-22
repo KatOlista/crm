@@ -4,4 +4,5 @@ export const DOTS = '...';
 export const DEFAULT_PAGE = 1;
 export const DEFAULT_SIBLING = 1;
 export const DEFAULT_FROM_ITEM = 0;
+export const bigScreenBreakpoint = 1440;
 

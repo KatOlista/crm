@@ -1,4 +1,7 @@
+import gsap from 'gsap'
+import { useRef } from 'react'
 import cn from 'classnames'
+import { useGSAP } from '@gsap/react'
 
 import { user } from '../../data/user'
 import { Button } from '..'
@@ -10,6 +13,17 @@ import BurgerMenuIcon from '../../assets/icons/burger-menu.svg?react'
 import CloseMenuIcon from '../../assets/icons/close.svg?react'
 
 export const Header = () => {
+  gsap.registerPlugin(useGSAP);
+
+  const container = useRef();
+
+  useGSAP(() => {
+    gsap
+      .from(container.current, {
+        x: '100%',
+      });
+  }, {scope: container});
+
   const { isMenuOpen, setIsMenuOpen } = useMenuStore(state => state);
 
   const toggleMenuHandler = (e) => {
@@ -36,7 +50,7 @@ export const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header ref={container} className={styles.header}>
       Hello {user.name} 👋🏼,
 
       <Button
@@ -49,7 +63,8 @@ export const Header = () => {
           })}
         />
         <CloseMenuIcon
-          className={cn(styles.header__icon, {
+          className={cn(styles.header__icon,
+            styles.header__hide, {
             [styles.header__show]: isMenuOpen,
           })}
         />
